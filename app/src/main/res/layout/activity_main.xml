@@ -11,10 +11,10 @@
 
     <ImageView
         android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/logotipofccdd"
+        android:layout_height="147dp"
         android:layout_marginBottom="24dp"
-        android:contentDescription="Logotipo FCCDD" />
+        android:contentDescription="Logotipo FCCDD"
+        android:src="@drawable/logotipofccdd" />
 
     <TextView
         android:layout_width="wrap_content"

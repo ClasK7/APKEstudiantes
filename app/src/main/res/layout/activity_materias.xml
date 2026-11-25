@@ -73,6 +73,16 @@
             android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMostrarAlumnos"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:text="Mostrar Alumnos"
+        android:textSize="16sp"
+        app:backgroundTint="@color/uteq_green"
+        android:textColor="@color/uteq_text_on_green" />
+
     <ProgressBar
         android:id="@+id/progressMaterias"
         android:layout_width="wrap_content"
@@ -82,9 +92,11 @@
         android:visibility="gone"
         android:indeterminateTint="@color/uteq_green" />
 
-    <ListView
-        android:id="@+id/lvMateriasExt"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAlumnosMaterias"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp" />
 </LinearLayout>
