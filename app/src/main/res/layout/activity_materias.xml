@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="#FFFFFF">
+    android:padding="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,18 +21,25 @@
             android:layout_height="48dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@android:drawable/ic_menu_revert"
-            android:contentDescription="Volver"
-            app:tint="#005B28" />
+            android:contentDescription="@string/volver"
+            app:tint="@color/uteq_green" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logotipofccdd"
+            android:layout_marginStart="8dp"
+            android:contentDescription="Logotipo FCCDD" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/gestion_de_materias"
-            android:textColor="#005B28"
+            android:textColor="@color/uteq_green"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:layout_marginStart="8dp"/>
+            android:layout_marginStart="12dp"/>
     </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -41,8 +47,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Seleccione el Semestre"
-        app:boxStrokeColor="#005B28"
-        app:hintTextColor="#005B28">
+        app:boxStrokeColor="@color/uteq_green"
+        app:hintTextColor="@color/uteq_green">
 
         <AutoCompleteTextView
             android:id="@+id/listaNiveles"
@@ -57,8 +63,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:hint="Materias Asignadas"
-        app:boxStrokeColor="#005B28"
-        app:hintTextColor="#005B28">
+        app:boxStrokeColor="@color/uteq_green"
+        app:hintTextColor="@color/uteq_green">
 
         <AutoCompleteTextView
             android:id="@+id/actvmaterias"
@@ -66,6 +72,15 @@
             android:layout_height="wrap_content"
             android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/progressMaterias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        android:indeterminateTint="@color/uteq_green" />
 
     <ListView
         android:id="@+id/lvMateriasExt"

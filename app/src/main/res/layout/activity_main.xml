@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -8,11 +9,18 @@
     android:gravity="center"
     android:background="#FFFFFF">
 
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logotipofccdd"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="Logotipo FCCDD" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO"
-        android:textColor="#005B28"
+        android:text="@string/universidad_tecnica_estatal_de_quevedo"
+        android:textColor="@color/uteq_green"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textAlignment="center"
@@ -22,18 +30,18 @@
         android:id="@+id/btnGestionAlumnos"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Gestión de Alumnos"
+        android:text="@string/gestion_de_alumnos"
         android:textSize="16sp"
-        android:backgroundTint="#005B28"
-        android:textColor="#FFFFFF"
+        app:backgroundTint="@color/uteq_green"
+        android:textColor="@color/uteq_text_on_green"
         android:layout_marginBottom="16dp"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnGestionMaterias"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Gestión de Materias"
+        android:text="@string/gestion_de_materias"
         android:textSize="16sp"
-        android:backgroundTint="#005B28"
-        android:textColor="#FFFFFF"/>
+        app:backgroundTint="@color/uteq_green"
+        android:textColor="@color/uteq_text_on_green"/>
 </LinearLayout>

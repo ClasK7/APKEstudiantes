@@ -43,11 +43,14 @@ class MateriasActivity : AppCompatActivity() {
             // Limpiar adaptador anterior de materias
             actvMaterias.setAdapter(null)
             actvMaterias.setText("")
+            
+            val progress = findViewById<android.widget.ProgressBar>(R.id.progressMaterias)
+            progress.visibility = android.view.View.VISIBLE
 
             lifecycleScope.launch {
                 try {
                     val result = SupabaseManager.client.from("materias")
-                        .select {
+                        .select(columns = io.github.jan.supabase.postgrest.query.Columns.list("id, nombre")) {
                             filter {
                                 eq("nivel", position + 1)
                             }
@@ -71,6 +74,8 @@ class MateriasActivity : AppCompatActivity() {
                     SupabaseErrorHandler.show(this@MateriasActivity, e)
                 } catch (e: Exception) {
                     SupabaseErrorHandler.show(this@MateriasActivity, e)
+                } finally {
+                    progress.visibility = android.view.View.GONE
                 }
             }
         }

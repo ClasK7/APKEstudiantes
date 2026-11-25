@@ -2,6 +2,9 @@
     <string name="app_name">AppSupabase</string>
     <string name="alumnos_uteq">Alumnos UTEQ</string>
     <string name="gestion_de_materias">Gestión de Materias</string>
+    <string name="gestion_de_alumnos">Gestión de Alumnos</string>
+    <string name="volver">Volver</string>
+    <string name="universidad_tecnica_estatal_de_quevedo">UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO</string>
 
     <string-array name="lista_meses">
         <item>Enero</item>
@@ -37,5 +40,7 @@
         <item>Sexto nivel</item>
         <item>Séptimo nivel</item>
         <item>Octavo nivel</item>
+        <item>Noveno nivel</item>
+        <item>Décimo nivel</item>
     </string-array>
 </resources>
